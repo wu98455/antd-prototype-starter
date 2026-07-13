@@ -1,5 +1,8 @@
 # Ant Design 可交互原型模板
 
+> **新建客户项目请先阅读 → [原型指南.md](./原型指南.md)**  
+> 含从复制模板到 GitHub Pages 部署的完整步骤，供 Cursor 按阶段执行。
+
 基于 **Vite + React + TypeScript + Ant Design + ProComponents** 的最小可演示模板，用于快速给客户展示后台原型。
 
 ## 功能
@@ -62,9 +65,13 @@ pnpm preview --host 0.0.0.0 --port 8080
 
 ## 复制为新项目
 
+**详细步骤见 [原型指南.md](./原型指南.md)**，简要命令：
+
 ```powershell
 xcopy /E /I D:\dev\projects\antd-prototype-starter D:\dev\projects\客户名-原型
 cd D:\dev\projects\客户名-原型
+Remove-Item -Recurse -Force .git
+git init
 # 修改 .env.development 中的 VITE_APP_TITLE
 pnpm install
 pnpm dev
