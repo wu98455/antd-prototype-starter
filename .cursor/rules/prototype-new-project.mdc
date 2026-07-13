@@ -1,0 +1,21 @@
+---
+description: 按原型指南新建客户原型时，自动执行复制模板、删 .git、git init 等流程。用户提及「原型指南」「新建原型」「部署 demo」时启用。
+alwaysApply: false
+---
+
+# 原型新建项目规则
+
+用户要求按 `原型指南.md` 新建原型时，必须：
+
+1. 阅读项目内或 `D:\dev\projects\antd-prototype-starter\原型指南.md`
+2. 从母版复制：`xcopy /E /I D:\dev\projects\antd-prototype-starter D:\dev\projects\{项目名}`
+3. **复制后立即自动执行（禁止跳过、禁止让用户手动做）：**
+   ```powershell
+   cd D:\dev\projects\{项目名}
+   Remove-Item -Recurse -Force .git
+   git init
+   ```
+4. 不在母版 `antd-prototype-starter` 上改客户业务
+5. 每个客户：独立文件夹 + 独立 GitHub 仓库 + 独立 Pages 链接
+6. 部署前修改 `.github/workflows/deploy-pages.yml` 的 `VITE_BASE_PATH: /{项目名}/`
+7. push GitHub 前确认代理（端口 7892）
