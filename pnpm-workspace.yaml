@@ -1,10 +1,2 @@
 packages:
   - '.'
-
-onlyBuiltDependencies:
-  - '@esbuild/*'
-  - core-js
-  - core-js-pure
-  - esbuild
-  - es5-ext
-  - '@scarf/scarf'

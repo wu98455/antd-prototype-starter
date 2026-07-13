@@ -30,10 +30,13 @@ jobs:
           cache: pnpm
 
       - name: Install
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Generate Umi files
+        run: pnpm exec max setup
 
       - name: Build for GitHub Pages
-        run: pnpm exec cross-env PUBLIC_PATH=/antd-prototype-starter/ max build
+        run: pnpm run build:pages
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
