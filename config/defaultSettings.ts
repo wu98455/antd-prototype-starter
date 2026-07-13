@@ -1,5 +1,7 @@
 import type { ProLayoutProps } from '@ant-design/pro-components';
 
+const PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
+
 /**
  * @name
  */
@@ -14,7 +16,7 @@ const Settings: ProLayoutProps & {
   fixSiderbar: true,
   colorWeak: false,
   title: 'Ant Design Pro',
-  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  logo: `${PUBLIC_PATH}logo.svg`,
   iconfontUrl: '',
   token: {
     // 参见ts声明，demo 见文档，通过token 修改样式
