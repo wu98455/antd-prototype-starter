@@ -16,6 +16,17 @@
 |------|------|
 | demo | 123456 |
 
+## 在线 Demo（GitHub Pages）
+
+推送 `main` 分支后自动部署，外网访问：
+
+**https://wu98455.github.io/antd-prototype-starter/**
+
+演示账号：`demo` / `123456`
+
+> 首次需在 GitHub 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。  
+> 仓库需为 **Public（公开）** 才能免费使用 Pages。
+
 ## 快速开始
 
 ```powershell
