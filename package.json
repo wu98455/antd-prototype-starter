@@ -93,16 +93,7 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@esbuild/*",
-      "core-js",
-      "core-js-pure",
-      "esbuild",
-      "es5-ext",
-      "@scarf/scarf"
-    ]
-  },
+  "packageManager": "pnpm@9.15.9",
   "create-umi": {
     "ignoreScript": [
       "docker*",

@@ -33,7 +33,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build for GitHub Pages
-        run: pnpm run build:pages
+        run: pnpm exec cross-env PUBLIC_PATH=/antd-prototype-starter/ max build
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
