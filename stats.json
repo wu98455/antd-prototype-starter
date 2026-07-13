@@ -3,15 +3,15 @@
     "umi": {
       "name": "umi",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js",
+        "_5d0f4522.5482bb14.async.js",
         "_cd8d5bc9.79d14d81.async.js",
         "_2c596274.13b13f9a.async.js",
         "_30d03162.62c94078.css",
-        "umi.38fae150.js"
+        "umi.68b0d451.js"
       ],
       "assets": [
         {
-          "name": "_3ab18667.caae3f9e.async.js"
+          "name": "_5d0f4522.5482bb14.async.js"
         },
         {
           "name": "_cd8d5bc9.79d14d81.async.js"
@@ -23,7 +23,7 @@
           "name": "_30d03162.62c94078.css"
         },
         {
-          "name": "umi.38fae150.js"
+          "name": "umi.68b0d451.js"
         }
       ]
     }
@@ -34,11 +34,11 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "id": "_3ab18667.caae3f9e.async.js",
+      "id": "_5d0f4522.5482bb14.async.js",
       "size": 10718,
       "hash": "",
       "files": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ]
     },
     {
@@ -82,11 +82,11 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "id": "umi.38fae150.js",
+      "id": "umi.68b0d451.js",
       "size": 10927,
       "hash": "",
       "files": [
-        "umi.38fae150.js"
+        "umi.68b0d451.js"
       ]
     },
     {
@@ -130,11 +130,11 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "id": "_ee6b23d2.06730238.async.js",
-      "size": 105211,
+      "id": "_ee6b23d2.0794efc8.async.js",
+      "size": 105176,
       "hash": "",
       "files": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ]
     },
     {
@@ -262,11 +262,11 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "id": "_21d7700a.a4d9bbe2.async.js",
-      "size": 77799,
+      "id": "_21d7700a.9f0aa5d1.async.js",
+      "size": 78022,
       "hash": "",
       "files": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ]
     },
     {
@@ -429,14 +429,14 @@
   "assets": [
     {
       "type": "asset",
-      "name": "_3ab18667.caae3f9e.async.js",
+      "name": "_5d0f4522.5482bb14.async.js",
       "info": {},
       "size": 10718,
       "emitted": false,
       "comparedForEmit": false,
       "cached": false,
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ]
     },
     {
@@ -477,14 +477,14 @@
     },
     {
       "type": "asset",
-      "name": "umi.38fae150.js",
+      "name": "umi.68b0d451.js",
       "info": {},
       "size": 10927,
       "emitted": false,
       "comparedForEmit": false,
       "cached": false,
       "chunks": [
-        "umi.38fae150.js"
+        "umi.68b0d451.js"
       ]
     },
     {
@@ -609,14 +609,14 @@
     },
     {
       "type": "asset",
-      "name": "_ee6b23d2.06730238.async.js",
+      "name": "_ee6b23d2.0794efc8.async.js",
       "info": {},
-      "size": 105211,
+      "size": 105176,
       "emitted": false,
       "comparedForEmit": false,
       "cached": false,
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ]
     },
     {
@@ -705,14 +705,14 @@
     },
     {
       "type": "asset",
-      "name": "_21d7700a.a4d9bbe2.async.js",
+      "name": "_21d7700a.9f0aa5d1.async.js",
       "info": {},
-      "size": 77799,
+      "size": 78022,
       "emitted": false,
       "comparedForEmit": false,
       "cached": false,
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ]
     },
     {
@@ -769,7 +769,7 @@
       "name": "node_modules/.pnpm/antd@6.5.0_date-fns@2.30.0_moment@2.30.1_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/antd/es/skeleton/index.js",
       "id": "node_modules/.pnpm/antd@6.5.0_date-fns@2.30.0_moment@2.30.1_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/antd/es/skeleton/index.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 74
     },
@@ -777,15 +777,15 @@
       "name": "src/.umi-production/plugin-layout/Layout.tsx",
       "id": "src/.umi-production/plugin-layout/Layout.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
-      "size": 6093
+      "size": 6058
     },
     {
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekOfYear.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekOfYear.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 775
     },
@@ -793,7 +793,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekYear.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekYear.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 395
     },
@@ -801,7 +801,7 @@
       "name": "src/pages/Welcome.tsx",
       "id": "src/pages/Welcome.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 1143
     },
@@ -809,15 +809,15 @@
       "name": "src/pages/user/login/index.tsx",
       "id": "src/pages/user/login/index.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
-      "size": 11875
+      "size": 11889
     },
     {
       "name": "src/.umi-production/core/EmptyRoute.tsx",
       "id": "src/.umi-production/core/EmptyRoute.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 285
     },
@@ -825,7 +825,7 @@
       "name": "src/pages/table-list/index.tsx",
       "id": "src/pages/table-list/index.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 9116
     },
@@ -833,7 +833,7 @@
       "name": "src/pages/exception/404/index.tsx",
       "id": "src/pages/exception/404/index.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 609
     },
@@ -841,7 +841,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 3879
     },
@@ -849,7 +849,7 @@
       "name": "src/pages/Admin.tsx",
       "id": "src/pages/Admin.tsx",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 1443
     },
@@ -857,7 +857,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/localeData.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/localeData.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 2083
     },
@@ -865,7 +865,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 1098
     },
@@ -873,7 +873,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/relativeTime.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/relativeTime.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 1422
     },
@@ -881,7 +881,7 @@
       "name": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekday.js",
       "id": "node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/weekday.js",
       "chunks": [
-        "_3ab18667.caae3f9e.async.js"
+        "_5d0f4522.5482bb14.async.js"
       ],
       "size": 427
     },
@@ -8569,7 +8569,7 @@
       "name": "src/.umi-production/umi.ts",
       "id": "src/.umi-production/umi.ts",
       "chunks": [
-        "umi.38fae150.js"
+        "umi.68b0d451.js"
       ],
       "size": 2900
     },
@@ -8802,7 +8802,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/MenuOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/MenuOutlined.js",
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ],
       "size": 622
     },
@@ -8810,7 +8810,7 @@
       "name": "node_modules/.pnpm/@umijs+route-utils@4.0.3/node_modules/@umijs/route-utils/es/path-to-regexp.js",
       "id": "node_modules/.pnpm/@umijs+route-utils@4.0.3/node_modules/@umijs/route-utils/es/path-to-regexp.js",
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ],
       "size": 13378
     },
@@ -8818,15 +8818,15 @@
       "name": "src/.umi-production/plugin-layout/Layout.tsx",
       "id": "src/.umi-production/plugin-layout/Layout.tsx",
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ],
-      "size": 6093
+      "size": 6058
     },
     {
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/CopyrightOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/CopyrightOutlined.js",
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ],
       "size": 888
     },
@@ -8834,7 +8834,7 @@
       "name": "node_modules/.pnpm/path-to-regexp@8.4.2/node_modules/path-to-regexp/dist/index.js",
       "id": "node_modules/.pnpm/path-to-regexp@8.4.2/node_modules/path-to-regexp/dist/index.js",
       "chunks": [
-        "_ee6b23d2.06730238.async.js"
+        "_ee6b23d2.0794efc8.async.js"
       ],
       "size": 14528
     },
@@ -9459,7 +9459,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/GlobalOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/GlobalOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 3219
     },
@@ -9467,7 +9467,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/BookOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/BookOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 647
     },
@@ -9475,7 +9475,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/SkinOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/SkinOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 701
     },
@@ -9483,15 +9483,15 @@
       "name": "src/pages/user/login/index.tsx",
       "id": "src/pages/user/login/index.tsx",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
-      "size": 11875
+      "size": 11889
     },
     {
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/GithubOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/GithubOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1015
     },
@@ -9499,7 +9499,7 @@
       "name": "package.json.[json].cjs",
       "id": "package.json.[json].cjs",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": null
     },
@@ -9507,7 +9507,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/LockOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/LockOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 699
     },
@@ -9515,7 +9515,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/MobileOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/MobileOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 538
     },
@@ -9523,7 +9523,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/TaobaoCircleOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/TaobaoCircleOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1445
     },
@@ -9531,7 +9531,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/UserOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/UserOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1037
     },
@@ -9539,7 +9539,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/WeiboCircleOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/WeiboCircleOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1694
     },
@@ -9547,7 +9547,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/AlipayCircleOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/AlipayCircleOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1536
     },
@@ -9555,7 +9555,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/ForkOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/ForkOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 930
     },
@@ -9563,7 +9563,7 @@
       "name": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/LogoutOutlined.js",
       "id": "node_modules/.pnpm/@ant-design+icons-svg@4.5.0/node_modules/@ant-design/icons-svg/lib/asn/LogoutOutlined.js",
       "chunks": [
-        "_21d7700a.a4d9bbe2.async.js"
+        "_21d7700a.9f0aa5d1.async.js"
       ],
       "size": 1123
     },
