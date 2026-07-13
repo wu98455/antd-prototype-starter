@@ -101,6 +101,9 @@ export default defineConfig({
    * @description 生成资源清单，配合 routePrefetch 使用
    */
   manifest: {},
+  links: [
+    { rel: 'icon', href: `${PUBLIC_PATH}favicon.ico` },
+  ],
   //============== 以下都是max的插件配置 ===============
   /**
    * @name 数据流插件
