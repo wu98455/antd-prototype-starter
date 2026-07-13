@@ -24,8 +24,8 @@
 
 演示账号：`demo` / `123456`
 
-> 首次需在 GitHub 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。  
-> 仓库需为 **Public（公开）** 才能免费使用 Pages。
+> 首次部署：等 Actions 跑完生成 `gh-pages` 分支后，在 **Settings → Pages** 设置：  
+> **Source** → **Deploy from a branch** → Branch **gh-pages** → **/ (root)**
 
 ## 快速开始
 
