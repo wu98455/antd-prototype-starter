@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Install
@@ -32,10 +32,7 @@ jobs:
       - name: Build for GitHub Pages
         run: pnpm run build:pages
         env:
-          VITE_BASE_PATH: /antd-prototype-starter/
-
-      - name: SPA fallback for GitHub Pages
-        run: cp dist/index.html dist/404.html
+          PUBLIC_PATH: /antd-prototype-starter/
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

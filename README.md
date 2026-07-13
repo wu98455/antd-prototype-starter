@@ -1,87 +1,67 @@
-# Ant Design 可交互原型模板
+# Ant Design Pro v6 原型母版
 
-> **新建客户项目请先阅读 → [原型指南.md](./原型指南.md)**  
-> 含从复制模板到 GitHub Pages 部署的完整步骤，供 Cursor 按阶段执行。
+> **新建客户项目请先阅读 → [原型指南.md](./原型指南.md)**
 
-基于 **Vite + React + TypeScript + Ant Design + ProComponents** 的最小可演示模板，用于快速给客户展示后台原型。
+基于官方 [Ant Design Pro v6](https://github.com/ant-design/ant-design-pro) **simple 精简版**（Umi Max 4 + ProComponents v3），用于快速搭建可交互后台原型并部署 GitHub Pages。
 
 ## 功能
 
 - 登录页（演示账号）
-- ProLayout 后台布局 + **SettingDrawer 整体风格设置**（主题色、导航模式、暗色等）
-- 分析看板（Statistic + 柱状图 + 饼图 + 排名，Mock 数据）
-- 监控页（占位示例）
-- 课程管理（ProTable + 搜索 + 分页 + Mock 数据）
-- 无需后端，纯前端 Mock
+- ProLayout + SettingDrawer 整体风格设置
+- 欢迎页、管理页、查询表格（ProTable + Mock）
+- 内置 mock，无需后端
 
 ## 演示账号
 
-| 账号 | 密码 |
-|------|------|
-| demo | 123456 |
+| 账号 | 密码 | 说明 |
+|------|------|------|
+| demo | 123456 | 原型工作流默认账号 |
+| admin | ant.design | Pro 官方默认账号 |
 
-## 在线 Demo（GitHub Pages）
-
-推送 `main` 分支后自动部署，外网访问：
+## 在线 Demo
 
 **https://wu98455.github.io/antd-prototype-starter/**
 
-演示账号：`demo` / `123456`
-
-> 首次部署：等 Actions 跑完生成 `gh-pages` 分支后，在 **Settings → Pages** 设置：  
-> **Source** → **Deploy from a branch** → Branch **gh-pages** → **/ (root)**
+推送 `main` 后 Actions 自动部署。首次需在 **Settings → Pages** 选择 **gh-pages** 分支。
 
 ## 快速开始
 
 ```powershell
 cd D:\dev\projects\antd-prototype-starter
 pnpm install
-pnpm dev
+pnpm start
 ```
 
-浏览器打开 http://localhost:5173
+浏览器打开 http://localhost:8000
 
 ## 局域网演示
 
 ```powershell
-pnpm dev --host 0.0.0.0 --port 5173
-ipconfig   # 查看 IPv4 地址
+pnpm start -- --host 0.0.0.0
+ipconfig
 ```
 
-同网设备访问：`http://<你的IP>:5173`
+同网设备访问：`http://<你的IP>:8000`
 
 ## 打包
 
 ```powershell
 pnpm build
-pnpm preview --host 0.0.0.0 --port 8080
+pnpm preview
 ```
 
-## 部署 Netlify
+GitHub Pages 子路径构建：
 
-1. 推送代码到 GitHub / Gitee
-2. Netlify → Add new site → 连接仓库
-3. Build: `pnpm run build`，Publish: `dist`
-4. 或本地 `pnpm build` 后拖拽 `dist` 到 Netlify
+```powershell
+pnpm build:pages
+```
 
 ## 复制为新项目
 
-**详细步骤见 [原型指南.md](./原型指南.md)**，简要命令：
-
-```powershell
-xcopy /E /I D:\dev\projects\antd-prototype-starter D:\dev\projects\客户名-原型
-cd D:\dev\projects\客户名-原型
-Remove-Item -Recurse -Force .git
-git init
-# 修改 .env.development 中的 VITE_APP_TITLE
-pnpm install
-pnpm dev
-```
+详见 [原型指南.md](./原型指南.md)。
 
 ## 相关文档
 
-- [Ant Design](https://ant.design/components/overview-cn/)
+- [Ant Design Pro Preview](https://preview.pro.ant.design/)
+- [Umi Max](https://umijs.org/docs/max/introduce)
 - [ProComponents](https://procomponents.ant.design/)
-- 工作流说明：`D:\IDE\Cursor\国企优学\Ant-Design可交互原型工作流.md`
-- 账号注册清单：`D:\dev\register-accounts-checklist.md`
-- 文档书签导入：`D:\dev\antd-prototype-bookmarks.html`
