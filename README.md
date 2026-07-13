@@ -8,8 +8,9 @@
 ## 功能
 
 - 登录页（演示账号）
-- ProLayout 后台布局
-- 首页看板（Statistic）
+- ProLayout 后台布局 + **SettingDrawer 整体风格设置**（主题色、导航模式、暗色等）
+- 分析看板（Statistic + 柱状图 + 饼图 + 排名，Mock 数据）
+- 监控页（占位示例）
 - 课程管理（ProTable + 搜索 + 分页 + Mock 数据）
 - 无需后端，纯前端 Mock
 
