@@ -32,6 +32,8 @@ const commitHash =
  * @doc https://umijs.org/docs/api/config#publicpath
  */
 const PUBLIC_PATH: string = process.env.PUBLIC_PATH || '/';
+const BASE_PATH: string =
+  PUBLIC_PATH === '/' ? '/' : PUBLIC_PATH.replace(/\/$/, '');
 
 export default defineConfig({
   alias: {
@@ -44,6 +46,7 @@ export default defineConfig({
    */
   hash: true,
 
+  base: BASE_PATH,
   publicPath: PUBLIC_PATH,
 
   /**
@@ -174,20 +177,12 @@ export default defineConfig({
    */
   access: {},
   /**
-   * @name Google Analytics
-   * @description 使用 GA4 (gtag.js) 进行站点分析
-   * @doc https://umijs.org/docs/max/analytics
-   */
-  analytics: {
-    ga_v2: 'G-59NF1VHHPF',
-  },
-  /**
    * @name <head> 中额外的 script
    * @description 配置 <head> 中额外的 script
    */
   headScripts: [
-    // 解决首次加载时白屏的问题
-    { src: join(PUBLIC_PATH, 'scripts/loading.js'), async: true },
+    // 解决首次加载时白屏的问题（勿用 path.join，Windows 会产生反斜杠）
+    { src: `${PUBLIC_PATH}scripts/loading.js`, async: true },
   ],
 
   //================ pro 插件配置 =================
