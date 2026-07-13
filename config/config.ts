@@ -102,7 +102,7 @@ export default defineConfig({
    */
   manifest: {},
   links: [
-    { rel: 'icon', href: `${PUBLIC_PATH}favicon.ico` },
+    { rel: 'icon', href: `${PUBLIC_PATH}favicon.ico?v=pro` },
   ],
   //============== 以下都是max的插件配置 ===============
   /**
