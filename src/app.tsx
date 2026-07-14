@@ -20,6 +20,7 @@ import {
   VersionDropdown,
 } from '@/components';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
+import { withPublicPath } from '@/utils/publicPath';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 
@@ -154,6 +155,8 @@ export const layout: RunTimeLayoutConfig = ({
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
     ...initialState?.settings,
+    // 子路径部署时强制正确 logo，避免 settings 里相对路径失效
+    logo: withPublicPath('logo.svg'),
     // 增加一个 loading 的状态（放在 settings 之后，避免被覆盖）
     childrenRender: (children) => {
       // if (initialState?.loading) return <PageLoading />;
@@ -175,9 +178,23 @@ export const layout: RunTimeLayoutConfig = ({
             }}
             settings={initialState?.settings}
             onSettingChange={(settings) => {
+              const colorPrimary = settings.colorPrimary || '#1677ff';
               setInitialState((s) => ({
                 ...s,
-                settings,
+                settings: {
+                  ...settings,
+                  logo: withPublicPath('logo.svg'),
+                  token: {
+                    ...settings.token,
+                    sider: {
+                      ...(settings.token as { sider?: Record<string, string> })
+                        ?.sider,
+                      // 选中菜单：主题色背景 + 白字，跟随 SettingDrawer 主题色
+                      colorBgMenuItemSelected: colorPrimary,
+                      colorTextMenuSelected: '#ffffff',
+                    },
+                  },
+                },
               }));
             }}
             drawerProps={{

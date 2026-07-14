@@ -1,7 +1,5 @@
 import type { ProLayoutProps } from '@ant-design/pro-components';
 
-const PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
-
 /**
  * @name
  */
@@ -16,11 +14,15 @@ const Settings: ProLayoutProps & {
   fixSiderbar: true,
   colorWeak: false,
   title: 'Ant Design Pro',
-  logo: `${PUBLIC_PATH}logo.svg`,
+  // 运行时用 PUBLIC_PATH（由 config.define 注入），适配 GitHub Pages 子路径
+  logo: `${process.env.PUBLIC_PATH || '/'}logo.svg`.replace(/([^:]\/)\/+/g, '$1'),
   iconfontUrl: '',
   token: {
-    // 参见ts声明，demo 见文档，通过token 修改样式
-    //https://procomponents.ant.design/components/layout#%E9%80%9A%E8%BF%87-token-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F
+    // 选中菜单：主题色背景 + 白字（CSS 会用 var(--ant-color-primary) 跟随主题色）
+    sider: {
+      colorBgMenuItemSelected: '#1677ff',
+      colorTextMenuSelected: '#ffffff',
+    },
   },
 };
 

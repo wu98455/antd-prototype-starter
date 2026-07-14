@@ -95,3 +95,19 @@ ol {
 .ant-pro-setting-drawer-handle {
   z-index: 999 !important;
 }
+
+/* 左侧选中菜单：主题色背景 + 白字/白图标（随 SettingDrawer 主题色变化） */
+.ant-pro-sider {
+  .ant-menu-item-selected,
+  .ant-menu-submenu-selected > .ant-menu-submenu-title {
+    background-color: var(--ant-color-primary) !important;
+    color: #fff !important;
+
+    .anticon,
+    .ant-menu-item-icon,
+    .ant-menu-title-content,
+    a {
+      color: #fff !important;
+    }
+  }
+}

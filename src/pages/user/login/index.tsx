@@ -27,6 +27,7 @@ import { Footer } from '@/components';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
 import Settings from '../../../../config/defaultSettings';
+import { withPublicPath } from '@/utils/publicPath';
 
 /**
  * Validate redirect URL to prevent open redirect attacks.
@@ -200,7 +201,7 @@ const Login: React.FC = () => {
             minWidth: 280,
             maxWidth: '75vw',
           }}
-          logo={<img alt="logo" src={Settings.logo as string} />}
+          logo={<img alt="logo" src={withPublicPath('logo.svg')} />}
           title="Ant Design"
           subTitle={intl.formatMessage({
             id: 'pages.layouts.userLayout.title',
