@@ -227,7 +227,8 @@ export default defineConfig({
   define: {
     'process.env.CI': process.env.CI,
     'process.env.COMMIT_HASH': commitHash,
-    'process.env.PUBLIC_PATH': JSON.stringify(PUBLIC_PATH),
+    // Umi define 会再 JSON.stringify，这里不要二次加引号，否则运行时会变成 "/xxx/"
+    'process.env.PUBLIC_PATH': PUBLIC_PATH,
     __APP_VERSION__: require('./../package.json').version,
     __UMI_VERSION__: require('@umijs/max/package.json').version,
     __UTOO_VERSION__: require('@utoo/pack/package.json').version,

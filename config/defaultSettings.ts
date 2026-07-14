@@ -15,7 +15,9 @@ const Settings: ProLayoutProps & {
   colorWeak: false,
   title: 'Ant Design Pro',
   // 运行时用 PUBLIC_PATH（由 config.define 注入），适配 GitHub Pages 子路径
-  logo: `${process.env.PUBLIC_PATH || '/'}logo.svg`.replace(/([^:]\/)\/+/g, '$1'),
+  logo: `${String(process.env.PUBLIC_PATH || '/')
+    .replace(/^['"]|['"]$/g, '')
+    .replace(/\/?$/, '/')}logo.svg`.replace(/([^:]\/)\/+/g, '$1'),
   iconfontUrl: '',
   token: {
     // 选中菜单：主题色背景 + 白字（CSS 会用 var(--ant-color-primary) 跟随主题色）
