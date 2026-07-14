@@ -20,6 +20,7 @@ import {
   VersionDropdown,
 } from '@/components';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
+import { demoMockAdapter } from '@/utils/demoMock';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 
@@ -153,15 +154,19 @@ export const layout: RunTimeLayoutConfig = ({
     menuHeaderRender: undefined,
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
-    // 增加一个 loading 的状态
+    ...initialState?.settings,
+    // 增加一个 loading 的状态（放在 settings 之后，避免被覆盖）
     childrenRender: (children) => {
       // if (initialState?.loading) return <PageLoading />;
       return (
         <>
           {children}
           <SettingDrawer
+            pathname={history.location.pathname}
             disableUrlParams
             enableDarkTheme
+            hideHintAlert
+            hideCopyButton
             collapse={initialState?.settingDrawerOpen}
             onCollapseChange={(open) => {
               setInitialState((s) => ({
@@ -176,11 +181,13 @@ export const layout: RunTimeLayoutConfig = ({
                 settings,
               }));
             }}
+            drawerProps={{
+              zIndex: 1100,
+            }}
           />
         </>
       );
     },
-    ...initialState?.settings,
   };
 };
 
@@ -190,8 +197,10 @@ export const layout: RunTimeLayoutConfig = ({
  * @doc https://umijs.org/docs/max/request#配置
  */
 export const request: RequestConfig = {
-  baseURL: isDev ? '' : 'https://pro-api.ant-design-demo.workers.dev',
+  // 生产静态站走本地 demo mock；开发环境继续用 Umi mock
+  baseURL: '',
   ...errorConfig,
+  ...(isDev ? {} : { adapter: demoMockAdapter }),
 };
 
 export function rootContainer(container: React.ReactNode) {
