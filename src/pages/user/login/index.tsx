@@ -15,6 +15,7 @@ import {
 import {
   FormattedMessage,
   Helmet,
+  history,
   SelectLang,
   useIntl,
   useModel,
@@ -160,7 +161,8 @@ const Login: React.FC = () => {
         await fetchUserInfo();
         const urlParams = new URL(window.location.href).searchParams;
         const redirectUrl = getSafeRedirectUrl(urlParams.get('redirect'));
-        window.location.href = redirectUrl;
+        // 使用 history.push，避免 GitHub Pages 子路径下 window.location 跳到站点根路径
+        history.push(redirectUrl);
         return;
       }
       // 如果失败去设置用户错误信息
