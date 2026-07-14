@@ -113,7 +113,7 @@ ol {
   /* ant 会给父级加 submenu-selected，这里强制按未选中显示 */
   .ant-menu-submenu-selected > .ant-menu-submenu-title {
     background-color: transparent !important;
-    color: var(--ant-color-text) !important;
+    color: var(--ant-menu-item-color, var(--ant-color-text-secondary)) !important;
 
     .anticon,
     .ant-menu-item-icon,
