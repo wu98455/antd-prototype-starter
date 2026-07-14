@@ -96,10 +96,9 @@ ol {
   z-index: 999 !important;
 }
 
-/* 左侧选中菜单：主题色背景 + 白字/白图标（随 SettingDrawer 主题色变化） */
+/* 左侧选中菜单：仅叶子项主题色底+白字；有二级时一级保持未选中 */
 .ant-pro-sider {
-  .ant-menu-item-selected,
-  .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  .ant-menu-item-selected {
     background-color: var(--ant-color-primary) !important;
     color: #fff !important;
 
@@ -108,6 +107,19 @@ ol {
     .ant-menu-title-content,
     a {
       color: #fff !important;
+    }
+  }
+
+  /* ant 会给父级加 submenu-selected，这里强制按未选中显示 */
+  .ant-menu-submenu-selected > .ant-menu-submenu-title {
+    background-color: transparent !important;
+    color: var(--ant-color-text) !important;
+
+    .anticon,
+    .ant-menu-item-icon,
+    .ant-menu-title-content,
+    a {
+      color: inherit !important;
     }
   }
 }
