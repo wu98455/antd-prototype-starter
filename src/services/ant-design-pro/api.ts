@@ -1,9 +1,20 @@
 // @ts-ignore
 /* eslint-disable */
 import { request } from '@umijs/max';
+import {
+  demoCurrentUser,
+  demoLogin,
+  demoNotices,
+  demoOutLogin,
+  demoRule,
+  useClientDemoMock,
+} from '@/utils/demoMock';
 
 /** 获取当前的用户 GET /api/currentUser */
 export async function currentUser(options?: { [key: string]: any }) {
+  if (useClientDemoMock) {
+    return demoCurrentUser();
+  }
   return request<{
     data: API.CurrentUser;
   }>('/api/currentUser', {
@@ -14,6 +25,9 @@ export async function currentUser(options?: { [key: string]: any }) {
 
 /** 退出登录接口 POST /api/login/outLogin */
 export async function outLogin(options?: { [key: string]: any }) {
+  if (useClientDemoMock) {
+    return demoOutLogin();
+  }
   return request<Record<string, any>>('/api/login/outLogin', {
     method: 'POST',
     ...(options || {}),
@@ -22,6 +36,9 @@ export async function outLogin(options?: { [key: string]: any }) {
 
 /** 登录接口 POST /api/login/account */
 export async function login(body: API.LoginParams, options?: { [key: string]: any }) {
+  if (useClientDemoMock) {
+    return demoLogin(body);
+  }
   return request<API.LoginResult>('/api/login/account', {
     method: 'POST',
     headers: {
@@ -34,6 +51,9 @@ export async function login(body: API.LoginParams, options?: { [key: string]: an
 
 /** 此处后端没有提供注释 GET /api/notices */
 export async function getNotices(options?: { [key: string]: any }) {
+  if (useClientDemoMock) {
+    return demoNotices();
+  }
   return request<API.NoticeIconList>('/api/notices', {
     method: 'GET',
     ...(options || {}),
@@ -51,6 +71,9 @@ export async function rule(
   },
   options?: { [key: string]: any },
 ) {
+  if (useClientDemoMock) {
+    return demoRule(params);
+  }
   return request<API.RuleList>('/api/rule', {
     method: 'GET',
     params: {

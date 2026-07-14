@@ -1,8 +1,7 @@
 /**
  * GitHub Pages 等静态部署没有 Umi mock 服务。
- * 生产环境用本地 mock，保证登录和列表可演示。
+ * 生产包直接用这套本地函数，保证登录和列表可演示。
  */
-import type { AxiosAdapter, InternalAxiosRequestConfig } from 'axios';
 
 const AUTH_KEY = 'antd-prototype-demo-auth';
 
@@ -51,114 +50,74 @@ const tableData: API.RuleListItem[] = Array.from({ length: 20 }).map(
   }),
 );
 
-function ok(data: unknown, config: InternalAxiosRequestConfig) {
-  return Promise.resolve({
-    data,
-    status: 200,
-    statusText: 'OK',
-    headers: {},
-    config,
-  });
+/** 生产静态包走本地 mock；开发仍用 Umi mock */
+export const useClientDemoMock = process.env.NODE_ENV === 'production';
+
+export async function demoLogin(body: API.LoginParams): Promise<API.LoginResult> {
+  await new Promise((r) => setTimeout(r, 200));
+  const valid =
+    (body.username === 'demo' && body.password === '123456') ||
+    (body.username === 'admin' && body.password === 'ant.design') ||
+    body.type === 'mobile';
+
+  if (valid) {
+    localStorage.setItem(AUTH_KEY, 'admin');
+    return {
+      status: 'ok',
+      type: body.type,
+      currentAuthority: 'admin',
+    };
+  }
+
+  localStorage.removeItem(AUTH_KEY);
+  return {
+    status: 'error',
+    type: body.type,
+    currentAuthority: 'guest',
+  };
 }
 
-function parseBody(config: InternalAxiosRequestConfig) {
-  const raw = config.data;
-  if (!raw) return {};
-  if (typeof raw === 'string') {
-    try {
-      return JSON.parse(raw);
-    } catch {
-      return {};
-    }
+export async function demoCurrentUser(): Promise<{ data: API.CurrentUser }> {
+  if (!localStorage.getItem(AUTH_KEY)) {
+    const error: any = new Error('请先登录！');
+    error.name = 'BizError';
+    error.info = {
+      success: false,
+      data: { isLogin: false },
+      errorCode: '401',
+      errorMessage: '请先登录！',
+    };
+    error.response = { status: 401 };
+    throw error;
   }
-  return raw as Record<string, unknown>;
+  return { data: demoUser };
 }
 
-function getUrl(config: InternalAxiosRequestConfig) {
-  return `${config.baseURL || ''}${config.url || ''}`;
+export async function demoOutLogin() {
+  localStorage.removeItem(AUTH_KEY);
+  return { data: {}, success: true };
 }
 
-export const demoMockAdapter: AxiosAdapter = (config) => {
-  const url = getUrl(config);
-  const method = (config.method || 'get').toLowerCase();
+export async function demoRule(params: {
+  current?: number;
+  pageSize?: number;
+}): Promise<API.RuleList> {
+  const current = Number(params.current || 1);
+  const pageSize = Number(params.pageSize || 10);
+  const start = (current - 1) * pageSize;
+  return {
+    data: tableData.slice(start, start + pageSize),
+    total: tableData.length,
+    success: true,
+    pageSize,
+    current,
+  };
+}
 
-  if (url.includes('/api/login/account') && method === 'post') {
-    const body = parseBody(config) as API.LoginParams;
-    const valid =
-      (body.username === 'demo' && body.password === '123456') ||
-      (body.username === 'admin' && body.password === 'ant.design') ||
-      body.type === 'mobile';
+export async function demoNotices(): Promise<API.NoticeIconList> {
+  return { data: [], total: 0, success: true };
+}
 
-    if (valid) {
-      localStorage.setItem(AUTH_KEY, 'admin');
-      return ok(
-        {
-          status: 'ok',
-          type: body.type,
-          currentAuthority: 'admin',
-        },
-        config,
-      );
-    }
-
-    localStorage.removeItem(AUTH_KEY);
-    return ok(
-      {
-        status: 'error',
-        type: body.type,
-        currentAuthority: 'guest',
-      },
-      config,
-    );
-  }
-
-  if (url.includes('/api/login/outLogin') && method === 'post') {
-    localStorage.removeItem(AUTH_KEY);
-    return ok({ data: {}, success: true }, config);
-  }
-
-  if (url.includes('/api/currentUser') && method === 'get') {
-    if (!localStorage.getItem(AUTH_KEY)) {
-      return Promise.resolve({
-        data: {
-          data: { isLogin: false },
-          errorCode: '401',
-          errorMessage: '请先登录！',
-          success: true,
-        },
-        status: 401,
-        statusText: 'Unauthorized',
-        headers: {},
-        config,
-      });
-    }
-    return ok({ success: true, data: demoUser }, config);
-  }
-
-  if (url.includes('/api/rule') && method === 'get') {
-    const params = config.params || {};
-    const current = Number(params.current || 1);
-    const pageSize = Number(params.pageSize || 10);
-    const start = (current - 1) * pageSize;
-    return ok(
-      {
-        data: tableData.slice(start, start + pageSize),
-        total: tableData.length,
-        success: true,
-        pageSize,
-        current,
-      },
-      config,
-    );
-  }
-
-  if (url.includes('/api/notices') && method === 'get') {
-    return ok({ data: [], total: 0, success: true }, config);
-  }
-
-  if (url.includes('/api/login/captcha')) {
-    return ok('captcha-demo', config);
-  }
-
-  return ok({ success: true, data: {} }, config);
-};
+export async function demoCaptcha() {
+  return 'captcha-demo';
+}

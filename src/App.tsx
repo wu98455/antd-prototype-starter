@@ -20,7 +20,6 @@ import {
   VersionDropdown,
 } from '@/components';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
-import { demoMockAdapter } from '@/utils/demoMock';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 
@@ -197,10 +196,8 @@ export const layout: RunTimeLayoutConfig = ({
  * @doc https://umijs.org/docs/max/request#配置
  */
 export const request: RequestConfig = {
-  // 生产静态站走本地 demo mock；开发环境继续用 Umi mock
   baseURL: '',
   ...errorConfig,
-  ...(isDev ? {} : { adapter: demoMockAdapter }),
 };
 
 export function rootContainer(container: React.ReactNode) {
