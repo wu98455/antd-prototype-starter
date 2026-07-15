@@ -8,7 +8,7 @@
 
 - 登录页（演示账号）
 - ProLayout + SettingDrawer 整体风格设置
-- 欢迎页、管理页、查询表格（ProTable + Mock）
+- 欢迎、管理页、Dashboard、表单页、列表页、详情页、结果页、异常页、个人页、AI 助手
 - 内置 mock，无需后端
 
 ## 演示账号
@@ -23,6 +23,8 @@
 **https://wu98455.github.io/antd-prototype-starter/**
 
 推送 `main` 后 Actions 自动部署。首次需在 **Settings → Pages** 选择 **gh-pages** 分支。
+
+**日常节奏：** 先在本地改并用 `pnpm start` 预览；**只有你明确要求时**才 push 部署（不要改一点推一点）。
 
 ## 快速开始
 

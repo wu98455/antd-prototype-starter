@@ -24,12 +24,14 @@ alwaysApply: false
    - 后续所有配置以对照表为准
 6. 按对照表改 `config/config.ts` 的 `PUBLIC_PATH`（或通过 `build:pages` 脚本）、`package.json` 的 `name`、`deploy-pages.yml`
 7. 不在母版 `antd-prototype-starter` 上改客户业务
-8. push GitHub 前确认代理（端口 7892）
+8. **日常改原型只本地预览**（`pnpm start`），**禁止**改完一点就 push；仅用户明确要求「推到 GitHub / 部署」时再 push
+9. 用户要求 push 时，先确认代理（端口 7892）
 
 ## 技术栈说明（Pro v6）
 
 - 框架：**Umi Max 4** + 官方 **Ant Design Pro v6 simple**
-- 开发：`pnpm start`（默认启用 mock）
+- 开发：`pnpm start`（默认启用 mock）→ 浏览器 http://localhost:8000
 - 构建：`pnpm build`；GitHub Pages：`pnpm build:pages`（设置 `PUBLIC_PATH`）
 - 路由：`config/routes.ts`；布局：`config/defaultSettings.ts`
 - Mock：`mock/` 目录
+- 部署：推送 `main` 后 Actions 发布；**时机由用户控制**

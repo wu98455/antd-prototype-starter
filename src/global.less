@@ -96,7 +96,7 @@ ol {
   z-index: 999 !important;
 }
 
-/* 左侧选中菜单：仅叶子项主题色底+白字；有二级时一级保持未选中 */
+/* 左侧选中菜单：叶子项主题色底+白字；一级（有二级）仅图标/文字用主题色，无选中底 */
 .ant-pro-sider {
   .ant-menu-item-selected {
     background-color: var(--ant-color-primary) !important;
@@ -110,16 +110,17 @@ ol {
     }
   }
 
-  /* ant 会给父级加 submenu-selected，这里强制按未选中显示 */
+  /* 二级选中时：一级标题透明底，图标与文字用主题色 */
   .ant-menu-submenu-selected > .ant-menu-submenu-title {
     background-color: transparent !important;
-    color: var(--ant-menu-item-color, var(--ant-color-text-secondary)) !important;
+    color: var(--ant-color-primary) !important;
 
     .anticon,
     .ant-menu-item-icon,
     .ant-menu-title-content,
+    .ant-menu-submenu-arrow,
     a {
-      color: inherit !important;
+      color: var(--ant-color-primary) !important;
     }
   }
 }

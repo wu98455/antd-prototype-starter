@@ -16,7 +16,7 @@ const Welcome: React.FC = () => {
           {intl.formatMessage({
             id: 'pages.welcome.description',
             defaultMessage:
-              '这是通用演示模板，可用于快速搭建可交互原型。请从左侧菜单进入管理页或查询表格。',
+              '这是通用演示母版，含仪表盘、表单、列表、详情等典型后台页面。请从左侧菜单进入对应模块。',
           })}
         </Typography.Paragraph>
         <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
